@@ -1,0 +1,289 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+RDP-SRV2::  Fri Apr 03 19:42:37 2015
+
+par -w -intstyle ise -ol high -mt off bandwidth_counter_map.ncd
+bandwidth_counter.ncd bandwidth_counter.pcf 
+
+
+Constraints file: bandwidth_counter.pcf.
+Loading device for application Rf_Device from file '6slx4.nph' in environment C:\Programs\Xilinx\14.7\ISE_DS\ISE\.
+   "bandwidth_counter" is an NCD, version 3.2, device xc6slx4, package cpg196, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   234 out of   4,800    4%
+    Number used as Flip Flops:                 234
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        168 out of   2,400    7%
+    Number used as logic:                      159 out of   2,400    6%
+      Number using O6 output only:              53
+      Number using O5 output only:              56
+      Number using O5 and O6:                   50
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,200    0%
+    Number used exclusively as route-thrus:      9
+      Number with same-slice register load:      5
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    92 out of     600   15%
+  Number of MUXCYs used:                       100 out of   1,200    8%
+  Number of LUT Flip Flop pairs used:          270
+    Number with an unused Flip Flop:            58 out of     270   21%
+    Number with an unused LUT:                 102 out of     270   37%
+    Number of fully used LUT-FF pairs:         110 out of     270   40%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of   4,800    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        42 out of     106   39%
+    Number of LOCed IOBs:                       42 out of      42  100%
+    IOB Flip Flops:                              8
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         8 out of      12   66%
+  Number of RAMB8BWERs:                          0 out of      24    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   8 out of     200    4%
+    Number used as ILOGIC2s:                     8
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of       8    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3175 - clk_ext does not clock data from Data<7>
+WARNING:Timing:3225 - Timing constraint COMP "Data<7>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE COMP "clk_ext"; ignored during timing analysis
+Starting initial Timing Analysis.  REAL time: 8 secs 
+Finished initial Timing Analysis.  REAL time: 8 secs 
+
+Starting Router
+
+
+Phase  1  : 1849 unrouted;      REAL time: 8 secs 
+
+Phase  2  : 1011 unrouted;      REAL time: 9 secs 
+
+Phase  3  : 233 unrouted;      REAL time: 10 secs 
+
+Phase  4  : 231 unrouted; (Setup:33211, Hold:3958, Component Switching Limit:0)     REAL time: 17 secs 
+
+Updating file: bandwidth_counter.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:33535, Hold:3647, Component Switching Limit:0)     REAL time: 19 secs 
+
+Phase  6  : 0 unrouted; (Setup:33011, Hold:3647, Component Switching Limit:0)     REAL time: 20 secs 
+
+Updating file: bandwidth_counter.ncd with current fully routed design.
+
+Phase  7  : 0 unrouted; (Setup:26903, Hold:3647, Component Switching Limit:0)     REAL time: 48 secs 
+
+Phase  8  : 0 unrouted; (Setup:26903, Hold:3647, Component Switching Limit:0)     REAL time: 48 secs 
+
+Phase  9  : 0 unrouted; (Setup:26903, Hold:0, Component Switching Limit:0)     REAL time: 48 secs 
+
+Phase 10  : 0 unrouted; (Setup:25142, Hold:0, Component Switching Limit:0)     REAL time: 48 secs 
+Total REAL time to Router completion: 48 secs 
+Total CPU time to Router completion: 46 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|              clk_60 | BUFGMUX_X3Y13| No   |   48 |  0.110     |  1.508      |
++---------------------+--------------+------+------+------------+-------------+
+|              clk_30 |  BUFGMUX_X2Y3| No   |   51 |  0.756     |  2.147      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 25142 (Setup: 25142, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
+   are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 2
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<6>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -2.018ns|    10.684ns|       1|        2018
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<2>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.988ns|    10.654ns|       1|        1988
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<1>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.832ns|    10.498ns|       1|        1832
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<0>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.643ns|    10.309ns|       1|        1643
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<7>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.613ns|    10.279ns|       1|        1613
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<4>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.555ns|    10.221ns|       1|        1555
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<5>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.549ns|    10.215ns|       1|        1549
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<3>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -1.495ns|    10.161ns|       1|        1495
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "WR_L" OFFSET = OUT 8.666 ns AFTER C | MAXDELAY    |    -0.771ns|     9.437ns|       1|         771
+  OMP "clk_ext"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "RD_L" OFFSET = OUT 8.666 ns AFTER C | MAXDELAY    |    -0.709ns|     9.375ns|       1|         709
+  OMP "clk_ext"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_my_dcm_clk0 = PERIOD TIMEGRP "my_dcm_c | SETUP       |    -0.680ns|    19.385ns|      29|        8650
+  lk0" TS_clk_ext_pin HIGH 50%              | HOLD        |     0.004ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+* COMP "OE_L" OFFSET = OUT 8.666 ns AFTER C | MAXDELAY    |    -0.504ns|     9.170ns|       1|         504
+  OMP "clk_ext"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_my_dcm_clkfx = PERIOD TIMEGRP "my_dcm_ | SETUP       |    -0.418ns|     4.584ns|       3|         514
+  clkfx" TS_clk_ext_pin / 4 HIGH 50%        | HOLD        |     0.029ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+* COMP "SIWU_L" OFFSET = OUT 8.666 ns AFTER | MAXDELAY    |    -0.301ns|     8.967ns|       1|         301
+   COMP "clk_ext"                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_ext_pin = PERIOD TIMEGRP "clk_ext_ | MINLOWPULSE |     8.666ns|     8.000ns|       0|           0
+  pin" 16.666 ns HIGH 50%                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "TXE_L" OFFSET = IN 9 ns VALID 9.5 n | SETUP       |     2.810ns|     6.190ns|       0|           0
+  s BEFORE COMP "clk_ext"                   | HOLD        |     2.822ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "RXF_L" OFFSET = IN 9 ns VALID 9.5 n | SETUP       |     2.961ns|     6.039ns|       0|           0
+  s BEFORE COMP "clk_ext"                   | HOLD        |     2.840ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<7>" OFFSET = IN 9 ns VALID 9.5 | N/A         |         N/A|         N/A|     N/A|         N/A
+   ns BEFORE COMP "clk_ext"                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_clk_ext_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_ext_pin                 |     16.666ns|      8.000ns|     19.385ns|            0|           32|            0|         1826|
+| TS_my_dcm_clkfx               |      4.167ns|      4.584ns|          N/A|            3|            0|         1044|            0|
+| TS_my_dcm_clk0                |     16.666ns|     19.385ns|          N/A|           29|            0|          782|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+14 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 1 mins 1 secs 
+Total CPU time to PAR completion: 47 secs 
+
+Peak Memory Usage:  388 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 44 errors found.
+
+Number of error messages: 0
+Number of warning messages: 3
+Number of info messages: 0
+
+Writing design to file bandwidth_counter.ncd
+
+
+
+PAR done!

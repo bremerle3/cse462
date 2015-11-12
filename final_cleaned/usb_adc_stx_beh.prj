@@ -1,0 +1,4 @@
+vhdl isim_temp "ipcore_dir/dcm.vhd"
+vhdl isim_temp "ipcore_dir/fifo.vhd"
+vhdl isim_temp "ipcore_dir/my_shift_reg.vhd"
+vhdl isim_temp "usb_adc.vhd"

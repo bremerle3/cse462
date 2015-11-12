@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/dcm.vhd"
+vhdl work "ipcore_dir/fifo.vhd"
+vhdl work "bandwidth_counter.vhd"

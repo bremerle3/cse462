@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="H:/cse462/Loopback_FSM/fsm_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="fsm" />
+            <top_module name="std_logic_1164" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/fsm/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/reset_l" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_l</obj_property>
+      <obj_property name="ObjectShortName">reset_l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/txe_l" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">txe_l</obj_property>
+      <obj_property name="ObjectShortName">txe_l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/rxf_l" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rxf_l</obj_property>
+      <obj_property name="ObjectShortName">rxf_l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/oe_l" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">oe_l</obj_property>
+      <obj_property name="ObjectShortName">oe_l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/wr_l" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_l</obj_property>
+      <obj_property name="ObjectShortName">wr_l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/rd_l" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_l</obj_property>
+      <obj_property name="ObjectShortName">rd_l</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/nxt_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">nxt_state</obj_property>
+      <obj_property name="ObjectShortName">nxt_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/d_int" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_int[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_int[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/eno" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">eno</obj_property>
+      <obj_property name="ObjectShortName">eno</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/eni" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">eni</obj_property>
+      <obj_property name="ObjectShortName">eni</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm/d_size" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">d_size</obj_property>
+      <obj_property name="ObjectShortName">d_size</obj_property>
+   </wvobject>
+</wave_config>

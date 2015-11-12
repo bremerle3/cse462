@@ -1,0 +1,17 @@
+Storage Target: SPI Flash Single FPGA
+128M
+FF
+finalTest
+H:/cse462/final_cleaned
+
+MCS
+No
+S
+No
+S
+No
+No
+ow_control
+
+MCS
+No

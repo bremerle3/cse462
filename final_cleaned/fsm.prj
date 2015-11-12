@@ -1,0 +1,2 @@
+vhdl work "ipcore_dir/dcm.vhd"
+vhdl work "fsm.vhd"

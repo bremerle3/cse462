@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+128M
+FF
+counter_PROM
+H:\cse462\counter/
+
+MCS
+No

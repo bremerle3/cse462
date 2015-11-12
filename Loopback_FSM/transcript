@@ -1,0 +1,29 @@
+# Reading C:/modeltech64_10.3a/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.3a Apr 14 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {loopback.fdo}
+# Model Technology ModelSim SE-64 vcom 10.3a Compiler 2014.04 Apr 14 2014
+# Start time: 19:28:27 on Feb 11,2015
+# vcom -reportprogress 300 -explicit -93 loopback.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fsm
+# -- Compiling architecture Behavioral of loopback
+# ** Error: (vcom-11) Could not find work.loopback.
+# 
+# ** Error: loopback.vhd(37): VHDL Compiler exiting
+# End time: 19:28:28 on Feb 11,2015, Elapsed time: 0: 0: 1
+# Errors: 2, Warnings: 0
+# ** Error: C:/modeltech64_10.3a/win64/vcom failed.
+# Error in macro ./loopback.fdo line 23
+# C:/modeltech64_10.3a/win64/vcom failed.
+#     while executing
+# "vcom -explicit  -93 "loopback.vhd""

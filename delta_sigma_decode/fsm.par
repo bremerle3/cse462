@@ -1,0 +1,300 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+BRY316-05::  Wed Mar 25 19:14:05 2015
+
+par -w -intstyle ise -ol high -mt off fsm_map.ncd fsm.ncd fsm.pcf 
+
+
+Constraints file: fsm.pcf.
+Loading device for application Rf_Device from file '6slx4.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "fsm" is an NCD, version 3.2, device xc6slx4, package cpg196, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                    34 out of   4,800    1%
+    Number used as Flip Flops:                  34
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         32 out of   2,400    1%
+    Number used as logic:                       31 out of   2,400    1%
+      Number using O6 output only:               4
+      Number using O5 output only:              24
+      Number using O5 and O6:                    3
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,200    0%
+    Number used exclusively as route-thrus:      1
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         1
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    11 out of     600    1%
+  Number of MUXCYs used:                        28 out of   1,200    2%
+  Number of LUT Flip Flop pairs used:           33
+    Number with an unused Flip Flop:             1 out of      33    3%
+    Number with an unused LUT:                   1 out of      33    3%
+    Number of fully used LUT-FF pairs:          31 out of      33   93%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of   4,800    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        42 out of     106   39%
+    Number of LOCed IOBs:                       42 out of      42  100%
+    IOB Flip Flops:                             16
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      12    0%
+  Number of RAMB8BWERs:                          0 out of      24    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                  16 out of     200    8%
+    Number used as ILOGIC2s:                    16
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of       8    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
+
+Starting Router
+
+
+Phase  1  : 174 unrouted;      REAL time: 5 secs 
+
+Phase  2  : 118 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 7 unrouted;      REAL time: 5 secs 
+
+Phase  4  : 8 unrouted; (Setup:3998, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Updating file: fsm.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:3998, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase  6  : 0 unrouted; (Setup:3998, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+
+Phase  7  : 0 unrouted; (Setup:3402, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+
+Phase  8  : 0 unrouted; (Setup:3402, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+
+Phase  9  : 0 unrouted; (Setup:3402, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+
+Phase 10  : 0 unrouted; (Setup:3402, Hold:0, Component Switching Limit:0)     REAL time: 9 secs 
+Total REAL time to Router completion: 9 secs 
+Total CPU time to Router completion: 8 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|                 clk |  BUFGMUX_X2Y3| No   |   19 |  0.693     |  2.100      |
++---------------------+--------------+------+------+------------+-------------+
+|            clk_fast | BUFGMUX_X3Y13| No   |    8 |  0.064     |  2.085      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 3402 (Setup: 3402, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
+   are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 2
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<1>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.475ns|     9.141ns|       1|         475
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<7>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.463ns|     9.129ns|       1|         463
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<2>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.433ns|     9.099ns|       1|         433
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<0>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.431ns|     9.097ns|       1|         431
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<5>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.422ns|     9.088ns|       1|         422
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<3>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.420ns|     9.086ns|       1|         420
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<6>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.380ns|     9.046ns|       1|         380
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* COMP "Data<4>" OFFSET = OUT 8.666 ns AFTE | MAXDELAY    |    -0.378ns|     9.044ns|       1|         378
+  R COMP "clk_ext"                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "WR_L" OFFSET = OUT 8.666 ns AFTER C | MAXDELAY    |     0.066ns|     8.600ns|       0|           0
+  OMP "clk_ext"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "RD_L" OFFSET = OUT 8.666 ns AFTER C | MAXDELAY    |     0.170ns|     8.496ns|       0|           0
+  OMP "clk_ext"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "OE_L" OFFSET = OUT 8.666 ns AFTER C | MAXDELAY    |     0.445ns|     8.221ns|       0|           0
+  OMP "clk_ext"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "SIWU_L" OFFSET = OUT 8.666 ns AFTER | MAXDELAY    |     0.699ns|     7.967ns|       0|           0
+   COMP "clk_ext"                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_ext_pin = PERIOD TIMEGRP "clk_ext_ | MINLOWPULSE |     8.666ns|     8.000ns|       0|           0
+  pin" 16.666 ns HIGH 50%                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_my_dcm_clkfx = PERIOD TIMEGRP "my_dcm_ | MINPERIOD   |     1.500ns|     2.666ns|       0|           0
+  clkfx" TS_clk_ext_pin / 4 HIGH 50%        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "TXE_L" OFFSET = IN 9 ns VALID 9.5 n | SETUP       |     4.156ns|     4.844ns|       0|           0
+  s BEFORE COMP "clk_ext"                   | HOLD        |     1.983ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "RXF_L" OFFSET = IN 9 ns VALID 9.5 n | SETUP       |     4.203ns|     4.797ns|       0|           0
+  s BEFORE COMP "clk_ext"                   | HOLD        |     2.075ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<3>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.196ns|     1.804ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.402ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<5>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.198ns|     1.802ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.400ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<7>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.199ns|     1.801ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.399ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<1>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.251ns|     1.749ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.347ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<4>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.366ns|     1.634ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.366ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<6>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.368ns|     1.632ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.364ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<0>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.419ns|     1.581ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.313ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "Data<2>" OFFSET = IN 9 ns VALID 9.5 | SETUP       |     7.421ns|     1.579ns|       0|           0
+   ns BEFORE COMP "clk_ext"                 | HOLD        |     0.311ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_my_dcm_clk0 = PERIOD TIMEGRP "my_dcm_c | SETUP       |    13.588ns|     3.078ns|       0|           0
+  lk0" TS_clk_ext_pin HIGH 50%              | HOLD        |     0.439ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_clk_ext_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_ext_pin                 |     16.666ns|      8.000ns|     10.664ns|            0|            0|            0|          369|
+| TS_my_dcm_clkfx               |      4.167ns|      2.666ns|          N/A|            0|            0|            0|            0|
+| TS_my_dcm_clk0                |     16.666ns|      3.078ns|          N/A|            0|            0|          369|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+8 constraints not met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 22 secs 
+Total CPU time to PAR completion: 9 secs 
+
+Peak Memory Usage:  487 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 8 errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 0
+
+Writing design to file fsm.ncd
+
+
+
+PAR done!

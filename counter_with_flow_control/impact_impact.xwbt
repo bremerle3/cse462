@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=H:\cse462\counter_with_flow_control\impact.xsl
+OUTFILE=H:\cse462\counter_with_flow_control\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=H:\cse462\counter_with_flow_control
+LICENSE=iMPACT
+USER_INFO=iMPACT

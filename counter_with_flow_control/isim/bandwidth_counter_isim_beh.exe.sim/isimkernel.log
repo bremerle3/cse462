@@ -1,0 +1,10 @@
+Command line:
+   bandwidth_counter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53644
+
+Mon Apr 13 18:08:07 2015
+
+
+ Elaboration Time: 1.73161 sec

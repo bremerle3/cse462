@@ -1,0 +1,28 @@
+Command line:
+   bandwidth_counter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54069
+
+Mon Apr 13 18:35:21 2015
+
+
+ Elaboration Time: 1.85641 sec
+
+ Current Memory Usage: 3060.9 Meg
+
+ Total Signals          : 891
+ Total Nets             : 2225
+ Total Signal Drivers   : 463
+ Total Blocks           : 73
+ Total Primitive Blocks : 48
+ Total Processes        : 262
+ Total Traceable Variables  : 572
+ Total Scalar Nets and Variables : 7702
+
+ Total Simulation Time: 1.85641 sec
+
+ Current Memory Usage: 3060.9 Meg
+
+Mon Apr 13 18:35:27 2015
+

@@ -1,0 +1,10 @@
+Command line:
+   usb_adc_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54075
+
+Fri Apr 24 15:05:39 2015
+
+
+ Elaboration Time: 0.234001 sec

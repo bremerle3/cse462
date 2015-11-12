@@ -1,0 +1,53 @@
+# RC reset
+#NET "reset_ext" LOC = A3 	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+# button reset
+NET "reset_ext" LOC = P8 	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+
+#leds
+NET "led0_out"	LOC = N3		|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "led1_out"	LOC = P3		|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+#FTDI Interface Signals
+NET "RXF_L" 	LOC = L14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "TXE_L" 	LOC = L13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "RD_L" 		LOC = K14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "WR_L" 		LOC = K13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "SIWU_L" 	LOC = J14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "OE_L" 		LOC = J13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+#Data pins
+NET "Data<7>" 	LOC = H13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<6>" 	LOC = F14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<5>" 	LOC = F13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<4>" 	LOC = G14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<3>" 	LOC = G13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<2>" 	LOC = E14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<1>" 	LOC = E13	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+NET "Data<0>" 	LOC = D14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+
+#Clock Constraints
+NET "clk_ext" 		LOC = H14	|IOSTANDARD = LVCMOS33 |SLEW = FAST |DRIVE = 24;
+
+NET "clk_ext"		TNM_NET = clk_ext_pin;
+TIMESPEC TS_clk_ext_pin = PERIOD clk_ext_pin 16.666 ns;
+#Created by Constraints Editor (xc6slx4-cpg196-2) - 2015/03/23
+NET "TXE_L" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "RXF_L" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<7>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<6>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<5>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<4>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<3>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<2>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<1>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "Data<0>" OFFSET = IN 9 ns VALID 9.5 ns BEFORE "clk_ext";
+NET "OE_L" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "WR_L" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "RD_L" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "SIWU_L" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<7>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<6>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<5>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<4>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<3>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<2>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<1>" OFFSET = OUT 8.666 ns AFTER "clk_ext";
+NET "Data<0>" OFFSET = OUT 8.666 ns AFTER "clk_ext";

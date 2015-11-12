@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=H:\cse462\Loopback_FSM\impact.xsl
+OUTFILE=H:\cse462\Loopback_FSM\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=H:\cse462\Loopback_FSM
+LICENSE=iMPACT
+USER_INFO=iMPACT

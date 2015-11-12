@@ -1,0 +1,11 @@
+Running: C:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o H:/cse462/Loopback_FSM/fsm_isim_beh.exe -prj H:/cse462/Loopback_FSM/fsm_beh.prj work.fsm 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Parsing VHDL file "H:/cse462/Loopback_FSM/ipcore_dir/dcm.vhd" into library work
+Parsing VHDL file "H:/cse462/Loopback_FSM/fsm.vhd" into library work
+Starting static elaboration
+ERROR:HDLCompiler:1156 - "H:/cse462/Loopback_FSM/fsm.vhd" Line 50: Formal port <RESET> does not exist in entity <dcm>.  Please compare the definition of block <dcm> to its component declaration and its instantion to detect the mismatch.
+ERROR:HDLCompiler:1156 - "H:/cse462/Loopback_FSM/fsm.vhd" Line 51: Formal port <LOCKED> does not exist in entity <dcm>.  Please compare the definition of block <dcm> to its component declaration and its instantion to detect the mismatch.
+ERROR:Simulator:777 - Static elaboration of top level VHDL design unit fsm in library work failed

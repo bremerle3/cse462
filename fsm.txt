@@ -1,0 +1,118 @@
+-- Leo Bremer, Jeremy Tang
+-- Richard
+-- CSE462M
+-- 11 February 2015
+
+-- Loopback VHDL
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY fsm IS
+    Port ( clk : in STD_LOGIC;
+			  reset_l : in std_logic;
+           Data : inout STD_LOGIC_VECTOR (7 downto 0);
+			  TXE_L : in STD_LOGIC;
+			  RXF_L : in STD_LOGIC;
+			  OE_L : out STD_LOGIC; 
+			  WR_L : out STD_LOGIC; 
+			  RD_L : out STD_LOGIC);
+END fsm;
+
+ARCHITECTURE Behavioral OF fsm IS
+
+--Constants
+constant D_SIZE : INTEGER := Data'length;
+
+--Signals
+type states is (s0, s1, s2, s3, s4, s5);
+signal state: states := s0;
+signal nxt_state: states := s0;
+signal D_int : std_logic_vector(D_SIZE - 1 downto 0);
+signal eno : std_logic;
+signal eni : std_logic;
+
+BEGIN
+
+	Data <= D_int WHEN eno = '1' else "ZZZZZZZZ";
+	--flip flop process
+	flip_flop: PROCESS(clk) BEGIN
+		if (rising_edge(clk)) then
+			if (eni = '1') then
+				D_int <= Data;
+			end if;
+		end if;
+	END PROCESS flip_flop;
+
+--process to implement the state register
+	clkd: PROCESS (clk) BEGIN
+		IF (clk'EVENT AND clk='1') THEN
+			IF (reset_l = '0') THEN
+				state <= s0;
+			ELSE
+				state <= nxt_state;
+			END IF;
+		END IF;
+	END PROCESS clkd;
+
+	-- process to determine next state
+	state_trans: PROCESS (RXF_L, TXE_L, state) BEGIN
+		nxt_state <= state ;
+		CASE state IS
+		WHEN s0 => 
+			IF (RXF_L = '1') THEN
+				nxt_state <= s0;
+			ELSE
+				nxt_state <= s1;
+			END IF ;
+		WHEN s1 => 		
+				nxt_state <= s2;
+		WHEN s2 => 
+			nxt_state <= s3;
+		WHEN s3 => -- turnaround delay
+				nxt_state <= s4;
+		WHEN s4 => 
+			IF (TXE_L = '0') THEN
+				nxt_state <= s5;
+			END IF;
+		WHEN s5 =>
+			nxt_state <= s0;
+		END CASE;
+	END PROCESS state_trans; 
+
+	--- process to define the output values
+
+	output: PROCESS (state)
+	BEGIN
+		CASE state IS
+			WHEN s1 =>
+				OE_L <= '0';
+				
+				RD_L <= '1';
+				WR_L <= '1';
+				eni <= '0';
+				eno <= '0';
+			WHEN s2 =>				
+				OE_L <= '0';
+				RD_L <= '0';
+				eni <= '1';
+				
+				WR_L <= '1';
+				eno <= '0';
+			WHEN s5 =>				
+				eno <= '1';
+				WR_L <= '0';
+				
+				OE_L <= '1';
+				RD_L <= '1';
+				eni <= '0';
+			WHEN others =>
+				OE_L <= '1';
+				RD_L <= '1';
+				WR_L <= '1';
+				eni <= '0';
+				eno <= '0';
+		END CASE ;
+	END PROCESS output ;
+	
+END Behavioral ; 

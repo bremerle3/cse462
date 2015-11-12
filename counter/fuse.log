@@ -1,0 +1,38 @@
+Running: C:\Programs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o H:/cse462/counter/counter_isim_beh.exe -prj H:/cse462/counter/counter_beh.prj work.counter 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Parsing VHDL file "H:/cse462/counter/ipcore_dir/dcm.vhd" into library work
+Parsing VHDL file "H:/cse462/counter/ipcore_dir/fifo.vhd" into library work
+Parsing VHDL file "H:/cse462/counter/counter.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package vcomponents
+Compiling package numeric_std
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture dcm_sp_clock_divide_by_2_v of entity dcm_sp_clock_divide_by_2 [dcm_sp_clock_divide_by_2_default]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_clock_lost_v of entity dcm_sp_clock_lost [dcm_sp_clock_lost_default]
+Compiling architecture dcm_sp_v of entity DCM_SP [\DCM_SP(true,"*",true,false,2.0,...]
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture xilinx of entity dcm [dcm_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(8,"0...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,10...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,10,"Bla...]
+Compiling architecture fifo_a of entity fifo [fifo_default]
+Compiling architecture behavioral of entity counter
+Time Resolution for simulation is 1ps.
+Compiled 35 VHDL Units
+Built simulation executable H:/cse462/counter/counter_isim_beh.exe
+Fuse Memory Usage: 62556 KB
+Fuse CPU Usage: 2355 ms

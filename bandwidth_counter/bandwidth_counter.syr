@@ -1,0 +1,471 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: bandwidth_counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "bandwidth_counter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "bandwidth_counter"
+Output Format                      : NGC
+Target Device                      : xc6slx4-2-cpg196
+
+---- Source Options
+Top Module Name                    : bandwidth_counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\warehouse2\home\lbremer\cse462\bandwidth_counter\ipcore_dir\dcm.vhd" into library work
+Parsing entity <dcm>.
+Parsing architecture <xilinx> of entity <dcm>.
+Parsing VHDL file "\\warehouse2\home\lbremer\cse462\bandwidth_counter\ipcore_dir\fifo.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <fifo_a> of entity <fifo>.
+Parsing VHDL file "\\warehouse2\home\lbremer\cse462\bandwidth_counter\bandwidth_counter.vhd" into library work
+Parsing entity <bandwidth_counter>.
+Parsing architecture <Behavioral> of entity <bandwidth_counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <bandwidth_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dcm> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bandwidth_counter>.
+    Related source file is "\\warehouse2\home\lbremer\cse462\bandwidth_counter\bandwidth_counter.vhd".
+INFO:Xst:3210 - "\\warehouse2\home\lbremer\cse462\bandwidth_counter\bandwidth_counter.vhd" line 118: Output port <full> of the instance <fifo1> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <state>.
+    Found 8-bit register for signal <sigout>.
+    Found 8-bit register for signal <counter>.
+    Found 26-bit register for signal <led_counter>.
+    Found 1-bit register for signal <rd_en>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_60 (rising_edge)                           |
+    | Reset              | reset_ext (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <counter[7]_GND_6_o_add_15_OUT> created at line 225.
+    Found 26-bit adder for signal <led_counter[25]_GND_6_o_add_18_OUT> created at line 237.
+    Found 1-bit tristate buffer for signal <Data<7>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<6>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<5>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<4>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<3>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<2>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<1>> created at line 101
+    Found 1-bit tristate buffer for signal <Data<0>> created at line 101
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   8 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <bandwidth_counter> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "\\warehouse2\home\lbremer\cse462\bandwidth_counter\ipcore_dir\dcm.vhd".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 26-bit adder                                          : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 26-bit register                                       : 1
+ 8-bit register                                        : 2
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo.ngc>.
+Loading core <fifo> for timing and area information for instance <fifo1>.
+
+Synthesizing (advanced) Unit <bandwidth_counter>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <led_counter>: 1 register on signal <led_counter>.
+Unit <bandwidth_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 01
+ s2    | 10
+-------------------
+
+Optimizing unit <bandwidth_counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bandwidth_counter, actual ratio is 8.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : bandwidth_counter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 333
+#      GND                         : 3
+#      INV                         : 8
+#      LUT1                        : 59
+#      LUT2                        : 42
+#      LUT3                        : 6
+#      LUT4                        : 38
+#      LUT5                        : 7
+#      LUT6                        : 22
+#      MUXCY                       : 86
+#      VCC                         : 2
+#      XORCY                       : 60
+# FlipFlops/Latches                : 243
+#      FD                          : 4
+#      FDC                         : 113
+#      FDCE                        : 65
+#      FDP                         : 14
+#      FDPE                        : 2
+#      FDR                         : 45
+# RAMS                             : 8
+#      RAMB16BWER                  : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 34
+#      IBUF                        : 3
+#      IBUFDS                      : 8
+#      IBUFG                       : 1
+#      OBUF                        : 14
+#      OBUFT                       : 8
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4cpg196-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             235  out of   4800     4%  
+ Number of Slice LUTs:                  182  out of   2400     7%  
+    Number used as Logic:               182  out of   2400     7%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    327
+   Number with an unused Flip Flop:      92  out of    327    28%  
+   Number with an unused LUT:           145  out of    327    44%  
+   Number of fully used LUT-FF pairs:    90  out of    327    27%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  42  out of    106    39%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of     12    66%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_ext                            | DCM_SP:CLK0            | 131   |
+clk_ext                            | DCM_SP:CLKFX           | 128   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 14.832ns (Maximum Frequency: 67.421MHz)
+   Minimum input arrival time before clock: 3.473ns
+   Maximum output required time after clock: 5.693ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_ext'
+  Clock period: 14.832ns (frequency: 67.421MHz)
+  Total number of paths / destination ports: 1886 / 781
+-------------------------------------------------------------------------
+Delay:               3.708ns (Levels of Logic = 2)
+  Source:            state_FSM_FFd1 (FF)
+  Destination:       fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram (RAM)
+  Source Clock:      clk_ext rising 4.0X
+  Destination Clock: clk_ext rising
+
+  Data Path: state_FSM_FFd1 to fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.525   1.084  state_FSM_FFd1 (state_FSM_FFd1)
+     begin scope: 'fifo1:wr_en'
+     LUT2:I0->O           32   0.250   1.519  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1_3 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i12)
+     begin scope: 'fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr:WEA<0>'
+     RAMB16BWER:WEA3           0.330          ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
+    ----------------------------------------
+    Total                      3.708ns (1.105ns logic, 2.603ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_ext'
+  Total number of paths / destination ports: 61 / 52
+-------------------------------------------------------------------------
+Offset:              3.473ns (Levels of Logic = 1)
+  Source:            reset_ext (PAD)
+  Destination:       sigout_0 (FF)
+  Destination Clock: clk_ext rising
+
+  Data Path: reset_ext to sigout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   1.328   1.686  reset_ext_IBUF (reset_ext_IBUF)
+     FDR:R                     0.459          sigout_0
+    ----------------------------------------
+    Total                      3.473ns (1.787ns logic, 1.686ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_ext'
+  Total number of paths / destination ports: 30 / 22
+-------------------------------------------------------------------------
+Offset:              5.693ns (Levels of Logic = 2)
+  Source:            fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram (RAM)
+  Destination:       Data<7> (PAD)
+  Source Clock:      clk_ext rising 4.0X
+
+  Data Path: fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram to Data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB0    1   2.100   0.681  ramloop[7].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram (DOUTB<7>)
+     end scope: 'fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr:DOUTB<7>'
+     end scope: 'fifo1:dout<7>'
+     OBUFT:I->O                2.912          Data_7_OBUFT (Data<7>)
+    ----------------------------------------
+    Total                      5.693ns (5.012ns logic, 0.681ns route)
+                                       (88.0% logic, 12.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_ext
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_ext        |    3.708|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.03 secs
+ 
+--> 
+
+Total memory usage is 275232 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

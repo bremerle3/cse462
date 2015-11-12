@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "H:/cse462/final_cleaned/usb_adc.xst" -ofn "H:/cse462/final_cleaned/usb_adc.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc adc_constraints.ucf -p xc6slx4-cpg196-2 usb_adc.ngc usb_adc.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_adc_map.ncd usb_adc.ngd usb_adc.pcf 
+par -w -intstyle ise -ol high -mt off usb_adc_map.ncd usb_adc.ncd usb_adc.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml usb_adc.twx usb_adc.ncd -o usb_adc.twr usb_adc.pcf -ucf adc_constraints.ucf 
+bitgen -intstyle ise -f usb_adc.ut usb_adc.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc adc_constraints.ucf -p xc6slx4-cpg196-2 usb_adc.ngc usb_adc.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o usb_adc_map.ncd usb_adc.ngd usb_adc.pcf 
+par -w -intstyle ise -ol high -mt off usb_adc_map.ncd usb_adc.ncd usb_adc.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml usb_adc.twx usb_adc.ncd -o usb_adc.twr usb_adc.pcf -ucf adc_constraints.ucf 

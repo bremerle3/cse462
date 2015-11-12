@@ -1,0 +1,2 @@
+vhdl isim_temp "ipcore_dir/dcm.vhd"
+vhdl isim_temp "bandwidth_counter.vhd"

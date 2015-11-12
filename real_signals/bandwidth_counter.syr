@@ -1,0 +1,708 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: bandwidth_counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "bandwidth_counter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "bandwidth_counter"
+Output Format                      : NGC
+Target Device                      : xc6slx4-2-cpg196
+
+---- Source Options
+Top Module Name                    : bandwidth_counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "\\warehouse2.seasad.wustl.edu\home\lbremer\cse462\real_signals\ipcore_dir\dcm.vhd" into library work
+Parsing entity <dcm>.
+Parsing architecture <xilinx> of entity <dcm>.
+Parsing VHDL file "\\warehouse2.seasad.wustl.edu\home\lbremer\cse462\real_signals\ipcore_dir\fifo.vhd" into library work
+Parsing entity <fifo>.
+Parsing architecture <fifo_a> of entity <fifo>.
+Parsing VHDL file "\\warehouse2.seasad.wustl.edu\home\lbremer\cse462\real_signals\ipcore_dir\my_shift_reg.vhd" into library work
+Parsing entity <my_shift_reg>.
+Parsing architecture <my_shift_reg_a> of entity <my_shift_reg>.
+Parsing VHDL file "\\warehouse2.seasad.wustl.edu\home\lbremer\cse462\real_signals\bandwidth_counter.vhd" into library work
+Parsing entity <bandwidth_counter>.
+Parsing architecture <Behavioral> of entity <bandwidth_counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <bandwidth_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <dcm> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <fifo> (architecture <fifo_a>) from library <work>.
+
+Elaborating entity <my_shift_reg> (architecture <my_shift_reg_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bandwidth_counter>.
+    Related source file is "\\warehouse2.seasad.wustl.edu\home\lbremer\cse462\real_signals\bandwidth_counter.vhd".
+    Found 2-bit register for signal <rd_state>.
+    Found 2-bit register for signal <wr_state>.
+    Found 1-bit register for signal <SIWU_L>.
+    Found 1-bit register for signal <txe_state>.
+    Found 1-bit register for signal <rxf_local>.
+    Found 1-bit register for signal <detect_rxf_prev>.
+    Found 2-bit register for signal <shift_reg_state>.
+    Found 8-bit register for signal <sigout>.
+    Found 8-bit register for signal <shift_reg_sum>.
+    Found 8-bit register for signal <counter_pipeline_ff>.
+    Found 8-bit register for signal <shift_reg_delay_cnt>.
+    Found 25-bit register for signal <counter>.
+    Found 8-bit register for signal <Data>.
+    Found finite state machine <FSM_0> for signal <rd_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_60 (rising_edge)                           |
+    | Reset              | reset_ext (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | s0                                             |
+    | Power Up State     | s0                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <wr_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_10 (rising_edge)                           |
+    | Reset              | reset_ext (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | t0                                             |
+    | Power Up State     | t0                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <shift_reg_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_240 (rising_edge)                          |
+    | Reset              | reset_ext (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | v0                                             |
+    | Power Up State     | v0                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <shift_reg_sum[7]_GND_7_o_add_35_OUT> created at line 464.
+    Found 8-bit adder for signal <shift_reg_delay_cnt[7]_GND_7_o_add_44_OUT> created at line 492.
+    Found 25-bit adder for signal <counter[24]_GND_7_o_add_49_OUT> created at line 505.
+    Found 8-bit subtractor for signal <GND_7_o_GND_7_o_sub_37_OUT<7:0>> created at line 467.
+    Found 1-bit 4-to-1 multiplexer for signal <fifo_rd_en> created at line 251.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+	inferred   3 Finite State Machine(s).
+Unit <bandwidth_counter> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "\\warehouse2.seasad.wustl.edu\home\lbremer\cse462\real_signals\ipcore_dir\dcm.vhd".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 25-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Registers                                            : 10
+ 1-bit register                                        : 4
+ 25-bit register                                       : 1
+ 8-bit register                                        : 5
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 3
+ 1-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo.ngc>.
+Reading core <ipcore_dir/my_shift_reg.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <fifo> for timing and area information for instance <fifo1>.
+Loading core <my_shift_reg> for timing and area information for instance <inst_shift_reg>.
+
+Synthesizing (advanced) Unit <bandwidth_counter>.
+The following registers are absorbed into counter <shift_reg_delay_cnt>: 1 register on signal <shift_reg_delay_cnt>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <shift_reg_sum>: 1 register on signal <shift_reg_sum>.
+Unit <bandwidth_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 25-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+ 8-bit updown counter                                  : 1
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+# Multiplexers                                         : 3
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <wr_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ t0    | 00
+ t1    | 01
+ t2    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_2> on signal <shift_reg_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ v0    | 00
+ v1    | 01
+ v2    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <rd_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ s0    | 00
+ s1    | 01
+ s2    | 11
+-------------------
+INFO:Xst:1901 - Instance my_dcm/pll_base_inst in unit my_dcm/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <bandwidth_counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bandwidth_counter, actual ratio is 9.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <fifo1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+FlipFlop wr_state_FSM_FFd1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 76
+ Flip-Flops                                            : 76
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : bandwidth_counter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 375
+#      GND                         : 4
+#      INV                         : 8
+#      LUT1                        : 59
+#      LUT2                        : 46
+#      LUT3                        : 18
+#      LUT4                        : 43
+#      LUT5                        : 10
+#      LUT6                        : 25
+#      MUXCY                       : 92
+#      VCC                         : 3
+#      XORCY                       : 67
+# FlipFlops/Latches                : 286
+#      FD                          : 7
+#      FDC                         : 116
+#      FDCE                        : 63
+#      FDE                         : 1
+#      FDP                         : 15
+#      FDPE                        : 2
+#      FDR                         : 25
+#      FDRE                        : 51
+#      FDSE                        : 6
+# RAMS                             : 8
+#      RAMB16BWER                  : 8
+# Shift Registers                  : 7
+#      SRLC32E                     : 7
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 36
+#      IBUF                        : 3
+#      IBUFDS                      : 8
+#      IBUFG                       : 1
+#      OBUF                        : 24
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4cpg196-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             286  out of   4800     5%  
+ Number of Slice LUTs:                  216  out of   2400     9%  
+    Number used as Logic:               209  out of   2400     8%  
+    Number used as Memory:                7  out of   1200     0%  
+       Number used as SRL:                7
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    366
+   Number with an unused Flip Flop:      80  out of    366    21%  
+   Number with an unused LUT:           150  out of    366    40%  
+   Number of fully used LUT-FF pairs:   136  out of    366    37%  
+   Number of unique control sets:        26
+
+IO Utilization: 
+ Number of IOs:                          44
+ Number of bonded IOBs:                  44  out of    106    41%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of     12    66%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+my_dcm/pll_base_inst/CLKOUT0       | BUFG                   | 124   |
+my_dcm/pll_base_inst/CLKOUT1       | BUFG                   | 150   |
+my_dcm/pll_base_inst/CLKOUT2       | BUFG                   | 35    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.265ns (Maximum Frequency: 189.932MHz)
+   Minimum input arrival time before clock: 6.167ns
+   Maximum output required time after clock: 5.176ns
+   Maximum combinational path delay: 6.155ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'my_dcm/pll_base_inst/CLKOUT0'
+  Clock period: 5.187ns (frequency: 192.800MHz)
+  Total number of paths / destination ports: 882 / 366
+-------------------------------------------------------------------------
+Delay:               5.187ns (Levels of Logic = 3)
+  Source:            rd_state_FSM_FFd2 (FF)
+  Destination:       fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_13 (FF)
+  Source Clock:      my_dcm/pll_base_inst/CLKOUT0 rising
+  Destination Clock: my_dcm/pll_base_inst/CLKOUT0 rising
+
+  Data Path: rd_state_FSM_FFd2 to fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.525   0.994  rd_state_FSM_FFd2 (rd_state_FSM_FFd2)
+     LUT4:I1->O           16   0.235   1.458  Mmux_fifo_rd_en11 (fifo_rd_en)
+     begin scope: 'fifo1:rd_en'
+     LUT4:I0->O           26   0.254   1.419  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/Mmux_RAM_RD_EN_FWFT11 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_rd_en)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1
+    ----------------------------------------
+    Total                      5.187ns (1.316ns logic, 3.871ns route)
+                                       (25.4% logic, 74.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'my_dcm/pll_base_inst/CLKOUT1'
+  Clock period: 5.265ns (frequency: 189.932MHz)
+  Total number of paths / destination ports: 1311 / 453
+-------------------------------------------------------------------------
+Delay:               5.265ns (Levels of Logic = 3)
+  Source:            wr_state_FSM_FFd2 (FF)
+  Destination:       fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram (RAM)
+  Source Clock:      my_dcm/pll_base_inst/CLKOUT1 rising
+  Destination Clock: my_dcm/pll_base_inst/CLKOUT1 rising
+
+  Data Path: wr_state_FSM_FFd2 to fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             25   0.525   1.403  wr_state_FSM_FFd2 (wr_state_FSM_FFd2)
+     LUT3:I2->O            6   0.254   0.984  Mmux_fifo_wr_en11 (fifo_wr_en)
+     begin scope: 'fifo1:wr_en'
+     LUT2:I0->O           32   0.250   1.519  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1_3 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i12)
+     begin scope: 'fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr:WEA<0>'
+     RAMB16BWER:WEA3           0.330          ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
+    ----------------------------------------
+    Total                      5.265ns (1.359ns logic, 3.906ns route)
+                                       (25.8% logic, 74.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'my_dcm/pll_base_inst/CLKOUT2'
+  Clock period: 3.197ns (frequency: 312.793MHz)
+  Total number of paths / destination ports: 242 / 45
+-------------------------------------------------------------------------
+Delay:               3.197ns (Levels of Logic = 1)
+  Source:            lvds_internal_ff_0 (FF)
+  Destination:       shift_reg_sum_0 (FF)
+  Source Clock:      my_dcm/pll_base_inst/CLKOUT2 rising
+  Destination Clock: my_dcm/pll_base_inst/CLKOUT2 rising
+
+  Data Path: lvds_internal_ff_0 to shift_reg_sum_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.525   1.177  lvds_internal_ff_0 (lvds_internal_ff_0)
+     LUT2:I0->O            8   0.250   0.943  _n0143_inv1 (_n0143_inv)
+     FDRE:CE                   0.302          shift_reg_sum_0
+    ----------------------------------------
+    Total                      3.197ns (1.077ns logic, 2.120ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'my_dcm/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 73 / 72
+-------------------------------------------------------------------------
+Offset:              6.167ns (Levels of Logic = 4)
+  Source:            TXE_L (PAD)
+  Destination:       fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_13 (FF)
+  Destination Clock: my_dcm/pll_base_inst/CLKOUT0 rising
+
+  Data Path: TXE_L to fifo1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.328   1.152  TXE_L_IBUF (TXE_L_IBUF)
+     LUT4:I0->O           16   0.254   1.458  Mmux_fifo_rd_en11 (fifo_rd_en)
+     begin scope: 'fifo1:rd_en'
+     LUT4:I0->O           26   0.254   1.419  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/Mmux_RAM_RD_EN_FWFT11 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_rd_en)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1
+    ----------------------------------------
+    Total                      6.167ns (2.138ns logic, 4.029ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'my_dcm/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 26 / 18
+-------------------------------------------------------------------------
+Offset:              3.590ns (Levels of Logic = 1)
+  Source:            reset_ext (PAD)
+  Destination:       shift_reg_state_FSM_FFd2 (FF)
+  Destination Clock: my_dcm/pll_base_inst/CLKOUT2 rising
+
+  Data Path: reset_ext to shift_reg_state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            49   1.328   1.803  reset_ext_IBUF (reset_ext_IBUF)
+     FDR:R                     0.459          shift_reg_state_FSM_FFd2
+    ----------------------------------------
+    Total                      3.590ns (1.787ns logic, 1.803ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'my_dcm/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              3.590ns (Levels of Logic = 1)
+  Source:            reset_ext (PAD)
+  Destination:       wr_state_FSM_FFd1 (FF)
+  Destination Clock: my_dcm/pll_base_inst/CLKOUT1 rising
+
+  Data Path: reset_ext to wr_state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            49   1.328   1.803  reset_ext_IBUF (reset_ext_IBUF)
+     FDR:R                     0.459          wr_state_FSM_FFd1
+    ----------------------------------------
+    Total                      3.590ns (1.787ns logic, 1.803ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'my_dcm/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              5.176ns (Levels of Logic = 2)
+  Source:            rd_state_FSM_FFd1 (FF)
+  Destination:       WR_L (PAD)
+  Source Clock:      my_dcm/pll_base_inst/CLKOUT0 rising
+
+  Data Path: rd_state_FSM_FFd1 to WR_L
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.525   0.804  rd_state_FSM_FFd1 (rd_state_FSM_FFd1)
+     LUT2:I1->O            1   0.254   0.681  Mmux_WR_L11 (WR_L_OBUF)
+     OBUF:I->O                 2.912          WR_L_OBUF (WR_L)
+    ----------------------------------------
+    Total                      5.176ns (3.691ns logic, 1.485ns route)
+                                       (71.3% logic, 28.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'my_dcm/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.505ns (Levels of Logic = 1)
+  Source:            lvds_internal_ff_0 (FF)
+  Destination:       sigout<0> (PAD)
+  Source Clock:      my_dcm/pll_base_inst/CLKOUT2 rising
+
+  Data Path: lvds_internal_ff_0 to sigout<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.525   1.068  lvds_internal_ff_0 (lvds_internal_ff_0)
+     OBUF:I->O                 2.912          sigout_0_OBUF (sigout<0>)
+    ----------------------------------------
+    Total                      4.505ns (3.437ns logic, 1.068ns route)
+                                       (76.3% logic, 23.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'my_dcm/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            counter_24 (FF)
+  Destination:       led0_out (PAD)
+  Source Clock:      my_dcm/pll_base_inst/CLKOUT1 rising
+
+  Data Path: counter_24 to led0_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.525   0.725  counter_24 (counter_24)
+     OBUF:I->O                 2.912          led0_out_OBUF (led0_out)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.155ns (Levels of Logic = 3)
+  Source:            TXE_L (PAD)
+  Destination:       WR_L (PAD)
+
+  Data Path: TXE_L to WR_L
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.328   0.984  TXE_L_IBUF (TXE_L_IBUF)
+     LUT2:I0->O            1   0.250   0.681  Mmux_WR_L11 (WR_L_OBUF)
+     OBUF:I->O                 2.912          WR_L_OBUF (WR_L)
+    ----------------------------------------
+    Total                      6.155ns (4.490ns logic, 1.665ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock my_dcm/pll_base_inst/CLKOUT0
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+my_dcm/pll_base_inst/CLKOUT0|    5.187|         |         |         |
+my_dcm/pll_base_inst/CLKOUT1|    2.386|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock my_dcm/pll_base_inst/CLKOUT1
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+my_dcm/pll_base_inst/CLKOUT0|    1.280|         |         |         |
+my_dcm/pll_base_inst/CLKOUT1|    5.265|         |         |         |
+my_dcm/pll_base_inst/CLKOUT2|    1.324|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock my_dcm/pll_base_inst/CLKOUT2
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+my_dcm/pll_base_inst/CLKOUT0|    2.009|         |         |         |
+my_dcm/pll_base_inst/CLKOUT1|    2.386|         |         |         |
+my_dcm/pll_base_inst/CLKOUT2|    3.197|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.23 secs
+ 
+--> 
+
+Total memory usage is 274944 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

@@ -1,0 +1,47 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o H:/cse462/real_signals/bandwidth_counter_isim_beh.exe -prj H:/cse462/real_signals/bandwidth_counter_beh.prj work.bandwidth_counter 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "H:/cse462/real_signals/ipcore_dir/dcm.vhd" into library work
+Parsing VHDL file "H:/cse462/real_signals/ipcore_dir/fifo.vhd" into library work
+Parsing VHDL file "H:/cse462/real_signals/ipcore_dir/my_shift_reg.vhd" into library work
+Parsing VHDL file "H:/cse462/real_signals/bandwidth_counter.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package std_logic_signed
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture pll_adv_v of entity PLL_ADV [\PLL_ADV("OPTIMIZED","CLKFBOUT",...]
+Compiling architecture pll_base_v of entity PLL_BASE [\PLL_BASE("OPTIMIZED",8,0.0,16.6...]
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture xilinx of entity dcm [dcm_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_as [\fifo_generator_v9_3_bhv_as(8,"0...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_preload0 [\fifo_generator_v9_3_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(0,0,14...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(0,0,14,"Bla...]
+Compiling architecture fifo_a of entity fifo [fifo_default]
+Compiling architecture ibufds_v of entity IBUFDS [\IBUFDS("DONT_CARE",false,"FALSE...]
+Compiling package bip_utils_pkg_v2_0
+Compiling package c_shift_ram_v11_0_pkg
+Compiling package c_reg_fd_v11_0_comp
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(1,"0","0",1,0,0,...]
+Compiling architecture behavioral of entity c_shift_ram_v11_0_legacy [\c_shift_ram_v11_0_legacy("spart...]
+WARNING:HDLCompiler:1242 - "N:/P.20131013/rtf/vhdl/src/ieee/numeric_std.vhd" Line 3240: Warning: "NUMERIC_STD.TO_UNSIGNED: vector truncated"
+Compiling architecture behavioral of entity c_shift_ram_v11_0 [\c_shift_ram_v11_0("spartan6",0,...]
+Compiling architecture my_shift_reg_a of entity my_shift_reg [my_shift_reg_default]
+Compiling architecture behavioral of entity bandwidth_counter
+Time Resolution for simulation is 1ps.
+Compiled 45 VHDL Units
+Built simulation executable H:/cse462/real_signals/bandwidth_counter_isim_beh.exe
+Fuse Memory Usage: 65544 KB
+Fuse CPU Usage: 1279 ms

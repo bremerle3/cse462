@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=H:\cse462\bandwidth_counter\bandwidth_counter.ncd
+OUTFILE=H:\cse462\bandwidth_counter\bandwidth_counter.bit
+FAMILY=Spartan6
+PART=xc6slx4-2cpg196
+WORKINGDIR=H:\cse462\bandwidth_counter
+LICENSE=WebPack
+USER_INFO=210641303_1777494432_210566142_247
